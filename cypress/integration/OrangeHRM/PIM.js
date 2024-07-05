@@ -53,11 +53,6 @@ describe('PIM Module', () => {
         Pimpage.getpswrd().type(data.password)
         Pimpage.getcnfrmpswrd().type('axsz12!')
 
-        
-
-        
-
-
     })
 })
 
