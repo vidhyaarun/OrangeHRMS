@@ -1,4 +1,5 @@
 import LoginCredentials from "../fixtures/LoginCredentials.json"
+import login from "../pageobjects/loginobj"
 
 
 // ***********************************************
@@ -23,10 +24,10 @@ import LoginCredentials from "../fixtures/LoginCredentials.json"
 
 
 Cypress.Commands.add('HRMlogin', (username,password) => {
-
-    cy.get('input[name="username"]').type(username)
-    cy.get('input[name="password"]').type(password)
-    cy.get('button[type="submit"]').click()
+   const loginpage =  new login()
+    loginpage.getusername().type(username)
+    loginpage.getpassword().type(password)
+    loginpage.getsubmitbtn().click()
     cy.url().should('include', '/opensource')
 })
 

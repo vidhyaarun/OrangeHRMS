@@ -2,15 +2,14 @@
 import LoginCredentials from "../../fixtures/LoginCredentials.json"
 describe('Validating Login Scenario', () => {
 
-  
+
     beforeEach(function () {
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
     })
-
     it('valid crediantials', () => {
 
-        cy.HRMlogin(LoginCredentials.valid.username,LoginCredentials.valid.password);
+        cy.HRMlogin(LoginCredentials.valid.username, LoginCredentials.valid.password);
 
     })
 
